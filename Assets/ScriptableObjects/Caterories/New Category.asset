@@ -1,0 +1,133 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-1838768378235500016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b189f7b71b6aa0c4ca026a2df97e873d, type: 3}
+  m_Name: ImageQuestion
+  m_EditorClassIdentifier: 
+  type: 0
+  answer:
+    type: 0
+    answerText: 
+    falseOpitons:
+    - 
+    - 
+    - 
+  inputAnswer: {fileID: 0}
+  isSolved: 0
+  hints:
+  - text: 
+    issued: 0
+  - text: 
+    issued: 0
+  - text: 
+    issued: 0
+  spriteQuestion: {fileID: 0}
+--- !u!114 &-481368804206512624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b189f7b71b6aa0c4ca026a2df97e873d, type: 3}
+  m_Name: ImageQuestion
+  m_EditorClassIdentifier: 
+  type: 0
+  answer:
+    type: 0
+    answerText: 
+    falseOpitons:
+    - 
+    - 
+    - 
+  inputAnswer: {fileID: 2837796234831615992}
+  isSolved: 0
+  hints:
+  - text: 
+    issued: 0
+  - text: 
+    issued: 0
+  - text: 
+    issued: 0
+  spriteQuestion: {fileID: 0}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f41e31a506e664c88d3ca3d91d74a0, type: 3}
+  m_Name: New Category
+  m_EditorClassIdentifier: 
+  nameCategory: 
+  icon: {fileID: 0}
+  questions:
+  - {fileID: -481368804206512624}
+  - {fileID: -1838768378235500016}
+--- !u!114 &2104204827919588716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88bd2696b6bfc1c4faf1d7e352de6484, type: 3}
+  m_Name: qeusito1
+  m_EditorClassIdentifier: 
+  type: 0
+  answerText: 
+  falseOpitons:
+  - 
+  - 
+  - 
+--- !u!114 &2837796234831615992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88bd2696b6bfc1c4faf1d7e352de6484, type: 3}
+  m_Name: qeusito1
+  m_EditorClassIdentifier: 
+  type: 0
+  answerText: 
+  falseOpitons:
+  - 
+  - 
+  - 
+--- !u!114 &5512851137161333097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88bd2696b6bfc1c4faf1d7e352de6484, type: 3}
+  m_Name: qeusito1
+  m_EditorClassIdentifier: 
+  type: 0
+  answerText: 
+  falseOpitons:
+  - 
+  - 
+  - 
