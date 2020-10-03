@@ -1,0 +1,12 @@
+{
+  "items": [
+    {
+      "key": "game_title",
+      "value": "Разгадайка"
+    },
+    {
+      "key": "start_button",
+      "value": "Начать игру"
+    }
+  ]
+}
