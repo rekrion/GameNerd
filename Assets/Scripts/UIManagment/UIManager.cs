@@ -52,4 +52,10 @@ public class UIManager : MonoBehaviour
     {
         SceneManager.LoadScene(_sceneNumber);
     }
+
+    public void Volume(AudioClip clip)
+    {
+
+
+    }    
 }
