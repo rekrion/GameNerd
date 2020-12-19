@@ -51,8 +51,8 @@ public class UIQuestionPanel : MonoBehaviour
         switch (contactInfo.type)
         {
             case TypeQuestion.Image: { imageQuestion.gameObject.SetActive(true); imageQuestion.sprite = contactInfo.sprite; } break;
-            case TypeQuestion.Sound: { imageQuestion.gameObject.SetActive(true); textQuestion.text = contactInfo.text; } break;
-            case TypeQuestion.Text: { soundQuestion.gameObject.SetActive(true);/**/ } break;
+            case TypeQuestion.Sound: { soundQuestion.gameObject.SetActive(true);/**/ } break;
+            case TypeQuestion.Text:  { textQuestion.gameObject.SetActive(true); textQuestion.text = contactInfo.text;  } break;
         }
     }
 

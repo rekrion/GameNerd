@@ -41,8 +41,8 @@ public class UICellQuestion : MonoBehaviour, ICell
         switch (typeQuestion)
         {
             case TypeQuestion.Image: return "Рисунок";
-            case TypeQuestion.Text: return "Звук";
-            case TypeQuestion.Sound: return "Текст";
+            case TypeQuestion.Text: return "Текст";
+            case TypeQuestion.Sound: return "Звук";
         }
         return null;
     }
