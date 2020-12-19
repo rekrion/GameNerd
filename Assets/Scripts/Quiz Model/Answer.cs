@@ -7,9 +7,9 @@ using UnityEngine;
 [System.Serializable]
 public class Answer
 {
-    [SerializeField] protected TypeAnswer type;
-    [SerializeField] protected string answerText;
-	[SerializeField] string[] falseOpitons = new string[3];
+    [SerializeField] public TypeAnswer type;
+    [SerializeField] public string answerText;
+	[SerializeField] public string[] falseOpitons = new string[3];
 	public virtual void OnGUI(SerializedObject so)
 	{
 		so.Update();

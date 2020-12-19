@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor;
+﻿using UnityEditor;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Question", menuName = "Quiz Model/Question")]
@@ -10,10 +7,12 @@ public class Question : ScriptableObject
 {
     [SerializeField] protected TypeQuestion type;
     [SerializeField] protected Answer answer;
-	[SerializeField] protected InputQuestion inputAnswer;
 	[SerializeField] protected bool isSolved;
     [SerializeField] public Hint[] hints = new Hint[3];
 
+	[HideInInspector] public TypeQuestion Type => type;
+	[HideInInspector] public Answer Answer => answer;
+	[HideInInspector] public Hint[] Hints => hints;
 
 	const int spaceLevel = 15;
 	bool showAnswer = false;
@@ -27,7 +26,7 @@ public class Question : ScriptableObject
 	{
 		ScriptableObject target = this;
 		SerializedObject so = new SerializedObject(target);
-		OnGUIShowInputAnswer(so);
+		//OnGUIShowInputAnswer(so);
 		OnGUIShowAnswer(so);
 		OnGUIShowHints(so);
 		isSolved = EditorGUILayout.Toggle("Is Solved", isSolved);
@@ -40,8 +39,8 @@ public class Question : ScriptableObject
 		if (showInputAnswer)
 		{
 			EditorGUI.indentLevel++;
-			if (inputAnswer != null)
-				inputAnswer.OnGUI();
+			//if (inputAnswer != null)
+			//	inputAnswer.OnGUI();
 			OnGUIShowButtons();
 			EditorGUI.indentLevel--;
 		}
@@ -59,6 +58,7 @@ public class Question : ScriptableObject
 	}
 	void AddSubAssetAtIndex(string name)
 	{
+		/*
 		InputQuestion newAsset = new InputQuestion();
 		newAsset.name = name;
 		AssetDatabase.AddObjectToAsset(newAsset, this);
@@ -67,6 +67,7 @@ public class Question : ScriptableObject
 		Debug.Log(AssetDatabase.GetAssetPath(this));
 		AssetDatabase.SaveAssets();
 		AssetDatabase.Refresh();
+		*/
 	}
 	private void OnGUIShowAnswerButtons()
 	{
@@ -116,4 +117,41 @@ public class Question : ScriptableObject
 
 	}
 
+}
+
+[System.Serializable]
+public class QuestionInfo
+{
+	public TypeQuestion type;
+	public Answer answer;
+	public bool isSolved;
+	public Hint[] hints = new Hint[3];
+	//For Text
+	public string text;
+	//For Sound
+	public AudioClip sound;
+	//For Image
+	public Sprite sprite;
+	public QuestionInfo()
+	{
+	}
+
+	public QuestionInfo(Question question)
+    {
+		this.type = question.Type;
+		this.answer = question.Answer;
+		this.hints = question.Hints;
+    }
+	public QuestionInfo(SoundQuestion question):this(question as Question)
+	{
+		this.sound = question.Sound;
+	}
+	public QuestionInfo(TextQuestion question) : this(question as Question)
+	{
+		this.text = question.Text;
+	}
+	public QuestionInfo(ImageQuestion question) : this(question as Question)
+	{
+		this.sprite = question.Sprite;
+	}
 }

@@ -1,5 +1,59 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8511056893489591558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88bd2696b6bfc1c4faf1d7e352de6484, type: 3}
+  m_Name: qeusito1
+  m_EditorClassIdentifier: 
+  type: 0
+  answerText: 
+  falseOpitons:
+  - 
+  - 
+  - 
+--- !u!114 &-3253617586014776316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88bd2696b6bfc1c4faf1d7e352de6484, type: 3}
+  m_Name: qeusito1
+  m_EditorClassIdentifier: 
+  type: 0
+  answerText: 
+  falseOpitons:
+  - 
+  - 
+  - 
+--- !u!114 &-1875255402767215176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88bd2696b6bfc1c4faf1d7e352de6484, type: 3}
+  m_Name: qeusito1
+  m_EditorClassIdentifier: 
+  type: 0
+  answerText: 
+  falseOpitons:
+  - 
+  - 
+  - 
 --- !u!114 &-1838768378235500016
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15,12 +69,12 @@ MonoBehaviour:
   type: 0
   answer:
     type: 0
-    answerText: 
+    answerText: "\u0444\u044B\u0432\u0444\u044B\u0432"
     falseOpitons:
     - 
     - 
     - 
-  inputAnswer: {fileID: 0}
+  inputAnswer: {fileID: -8511056893489591558}
   isSolved: 0
   hints:
   - text: 
@@ -29,7 +83,7 @@ MonoBehaviour:
     issued: 0
   - text: 
     issued: 0
-  spriteQuestion: {fileID: 0}
+  spriteQuestion: {fileID: 21300000, guid: ac250f889acb51e4186752b28cbb263b, type: 3}
 --- !u!114 &-481368804206512624
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44,22 +98,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   answer:
-    type: 2
-    answerText: 
+    type: 1
+    answerText: "\u0444\u044B\u0432\u0444\u044B\u0432"
     falseOpitons:
     - 
     - 
     - 
-  inputAnswer: {fileID: 2837796234831615992}
+  inputAnswer: {fileID: 6534011132066592163}
   isSolved: 0
   hints:
-  - text: 
+  - text: Info
     issued: 0
-  - text: 
+  - text: Info
     issued: 0
-  - text: 
+  - text: Info
     issued: 0
-  spriteQuestion: {fileID: 0}
+  spriteQuestion: {fileID: 21300000, guid: 1936d34de48c03b4999f2e8db9bac746, type: 3}
+--- !u!114 &-253730659608256159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88bd2696b6bfc1c4faf1d7e352de6484, type: 3}
+  m_Name: qeusito1
+  m_EditorClassIdentifier: 
+  type: 0
+  answerText: 
+  falseOpitons:
+  - 
+  - 
+  - 
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72,8 +144,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95f41e31a506e664c88d3ca3d91d74a0, type: 3}
   m_Name: New Category
   m_EditorClassIdentifier: 
-  nameCategory: 
-  icon: {fileID: 0}
+  nameCategory: "\u0418\u0433\u0440\u044B"
+  icon: {fileID: 21300000, guid: 1e52f3751b9dfcd4cacc5d78c50402ac, type: 3}
   questions:
   - {fileID: -481368804206512624}
   - {fileID: -1838768378235500016}
@@ -97,6 +169,42 @@ MonoBehaviour:
   - 
   - 
 --- !u!114 &2837796234831615992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88bd2696b6bfc1c4faf1d7e352de6484, type: 3}
+  m_Name: qeusito1
+  m_EditorClassIdentifier: 
+  type: 0
+  answerText: 
+  falseOpitons:
+  - 
+  - 
+  - 
+--- !u!114 &3730260616092880818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88bd2696b6bfc1c4faf1d7e352de6484, type: 3}
+  m_Name: qeusito1
+  m_EditorClassIdentifier: 
+  type: 0
+  answerText: 
+  falseOpitons:
+  - 
+  - 
+  - 
+--- !u!114 &4678026070352384170
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -144,15 +252,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d785060cd0761646ade45e00acf0ad4, type: 3}
   m_Name: TextQuestion
   m_EditorClassIdentifier: 
-  type: 0
+  type: 1
   answer:
-    type: 0
-    answerText: 
+    type: 2
+    answerText: "\u0444\u044B\u0432\u0444\u044B\u0432"
     falseOpitons:
-    - 
-    - 
-    - 
-  inputAnswer: {fileID: 0}
+    - "\u0444\u044B\u0432"
+    - "\u0444\u044B"
+    - "\u0432\u0444\u044B\u0432"
+  inputAnswer: {fileID: -1875255402767215176}
   isSolved: 0
   hints:
   - text: 
@@ -161,4 +269,40 @@ MonoBehaviour:
     issued: 0
   - text: 
     issued: 0
-  text: 
+  text: "\u0432\u043E\u043F\u0440\u043E\u0441 \u044D\u0442\u043E \u043E\u0442\u0432\u0435\u0442"
+--- !u!114 &6198215554697525911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88bd2696b6bfc1c4faf1d7e352de6484, type: 3}
+  m_Name: qeusito1
+  m_EditorClassIdentifier: 
+  type: 0
+  answerText: 
+  falseOpitons:
+  - 
+  - 
+  - 
+--- !u!114 &6534011132066592163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88bd2696b6bfc1c4faf1d7e352de6484, type: 3}
+  m_Name: qeusito1
+  m_EditorClassIdentifier: 
+  type: 0
+  answerText: 
+  falseOpitons:
+  - 
+  - 
+  - 

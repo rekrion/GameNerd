@@ -10,6 +10,8 @@ public class ImageQuestion : Question
     [SerializeField]
     private Sprite spriteQuestion;
 
+    [HideInInspector] public Sprite Sprite => spriteQuestion;
+
     public override void OnGUI()
     {
         type = TypeQuestion.Image;

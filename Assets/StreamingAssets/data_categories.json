@@ -1,0 +1,141 @@
+{
+    "items": [
+        {
+            "nameCategory": "Игры",
+            "icon": {
+                "instanceID": 19260
+            },
+            "questions": [
+                {
+                    "type": 0,
+                    "answer": {
+                        "type": 1,
+                        "answerText": "фывфыв",
+                        "falseOpitons": [
+                            "",
+                            "",
+                            ""
+                        ]
+                    },
+                    "inputAnswer": {
+                        "type": 1,
+                        "answerText": "фывфыв",
+                        "falseOptions": [
+                            "",
+                            "",
+                            ""
+                        ]
+                    },
+                    "isSolved": false,
+                    "hints": [
+                        {
+                            "text": "Info",
+                            "issued": false
+                        },
+                        {
+                            "text": "Info",
+                            "issued": false
+                        },
+                        {
+                            "text": "Info",
+                            "issued": false
+                        }
+                    ],
+                    "text": "",
+                    "sound": {
+                        "instanceID": 0
+                    },
+                    "sprite": {
+                        "instanceID": 16722
+                    }
+                },
+                {
+                    "type": 0,
+                    "answer": {
+                        "type": 0,
+                        "answerText": "фывфыв",
+                        "falseOpitons": [
+                            "",
+                            "",
+                            ""
+                        ]
+                    },
+                    "inputAnswer": {
+                        "type": 0,
+                        "answerText": "фывфыв",
+                        "falseOptions": [
+                            "",
+                            "",
+                            ""
+                        ]
+                    },
+                    "isSolved": false,
+                    "hints": [
+                        {
+                            "text": "",
+                            "issued": false
+                        },
+                        {
+                            "text": "",
+                            "issued": false
+                        },
+                        {
+                            "text": "",
+                            "issued": false
+                        }
+                    ],
+                    "text": "",
+                    "sound": {
+                        "instanceID": 0
+                    },
+                    "sprite": {
+                        "instanceID": 14342
+                    }
+                },
+                {
+                    "type": 1,
+                    "answer": {
+                        "type": 2,
+                        "answerText": "фывфыв",
+                        "falseOpitons": [
+                            "фыв",
+                            "фы",
+                            "вфыв"
+                        ]
+                    },
+                    "inputAnswer": {
+                        "type": 2,
+                        "answerText": "фывфыв",
+                        "falseOptions": [
+                            "фыв",
+                            "фы",
+                            "вфыв"
+                        ]
+                    },
+                    "isSolved": false,
+                    "hints": [
+                        {
+                            "text": "",
+                            "issued": false
+                        },
+                        {
+                            "text": "",
+                            "issued": false
+                        },
+                        {
+                            "text": "",
+                            "issued": false
+                        }
+                    ],
+                    "text": "вопрос это ответ",
+                    "sound": {
+                        "instanceID": 0
+                    },
+                    "sprite": {
+                        "instanceID": 0
+                    }
+                }
+            ]
+        }
+    ]
+}

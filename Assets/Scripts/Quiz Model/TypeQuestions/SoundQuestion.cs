@@ -8,6 +8,8 @@ public class SoundQuestion : Question
 {
     [SerializeField]
     AudioClip sound;
+
+    [HideInInspector] public AudioClip Sound => sound;
     public override void OnGUI()
     {
         type = TypeQuestion.Sound;
