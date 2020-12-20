@@ -11,15 +11,13 @@ GameObject:
   - component: {fileID: 2877138814501953955}
   - component: {fileID: 2877138814501953953}
   - component: {fileID: 2877138814501953952}
-  - component: {fileID: 30059822}
-  - component: {fileID: 4313271355408239644}
   m_Layer: 5
   m_Name: Grid Questions Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2877138814501953955
 RectTransform:
   m_ObjectHideFlags: 0
@@ -78,32 +76,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &30059822
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2877138814501953954}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8dddfd535581184b94569d58ec3d225, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _recyclableScrollRect: {fileID: 2877138815644783980}
---- !u!114 &4313271355408239644
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2877138814501953954}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8dddfd535581184b94569d58ec3d225, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _recyclableScrollRect: {fileID: 2877138815644783980}
 --- !u!1 &2877138815320903230
 GameObject:
   m_ObjectHideFlags: 0

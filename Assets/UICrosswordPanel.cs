@@ -15,9 +15,12 @@ public class UICrosswordPanel : MonoBehaviour
         public UICharCell[] cellSymbols;
         public int countSymbols;
 
+        Action<char, int> action;
+
         int indexChar = 0;
-        internal void InitChars(string chars, GameObject charPrefab, GameObject otherCharPrefab)
+        internal void InitChars(string chars, GameObject charPrefab, GameObject otherCharPrefab, Action<char, int> action)
         {
+            this.action = action;
             countSymbols = 0;
             charLine = new UICharCell[chars.Length];
             for (int i = 0; i < chars.Length; i++)
@@ -61,7 +64,18 @@ public class UICrosswordPanel : MonoBehaviour
             cellSymbols[indexChar].TextChar.text = symbol.ToString();
             cellSymbols[indexChar].IndexButton = indexButton;
             cellSymbols[indexChar].GetComponentInChildren<Button>().interactable = true;
+            cellSymbols[indexChar].GetComponentInChildren<Button>().onClick.AddListener(() => action(symbol, indexButton));
             return indexChar;
+        }
+
+        internal void ClearChar(int index)
+        {
+            indexChar = index;
+            cellSymbols[indexChar].TextChar.text = "";
+            cellSymbols[indexChar].IndexButton = -1;
+            cellSymbols[indexChar].GetComponentInChildren<Button>().interactable = false;
+            cellSymbols[indexChar].GetComponentInChildren<Button>().onClick.RemoveAllListeners();
+
         }
     }
 
@@ -75,11 +89,14 @@ public class UICrosswordPanel : MonoBehaviour
         string answer;
         public bool isBlocked = false;
 
-        public void Setup(string answer, GameObject outputPanel, GameObject charPrefab, GameObject otherCharPrefab)
+        Action<char, int> action;
+
+        public void Setup(string answer, GameObject outputPanel, Action<char, int> action, GameObject charPrefab, GameObject otherCharPrefab)
         {
             string currentAnswer = answer.ToUpper().Trim();
             if (this.answer == currentAnswer) return;
             this.answer = currentAnswer;
+            this.action = action;
             ResetPanel();
             SetupLines(outputPanel);
             InitLines(charPrefab, otherCharPrefab);
@@ -121,7 +138,7 @@ public class UICrosswordPanel : MonoBehaviour
         {
             line.lineObject.gameObject.SetActive(true);
             line.textLine = text;
-            line.InitChars(line.textLine, charPrefab, otherCharPrefab);
+            line.InitChars(line.textLine, charPrefab, otherCharPrefab, action);
         }
         void ResetPanel()
         {
@@ -175,35 +192,46 @@ public class UICrosswordPanel : MonoBehaviour
             GetLinesIndex();
             if (lines.Length < selectLines)
             {
-                currentText = CheckResultText();
-                if (currentText == answer)
-                {
-                    DataManager.Get.Question().isSolved = true;
-                    DataManager.Get.Save();
-                }
-                Debug.Log(currentText);
+                EndAction();
                 return true;
             }             
             if (lines[selectLines].lineObject.gameObject.activeSelf == false)
             {
-                currentText = CheckResultText();
-                if (currentText == answer)
-                {
-                    DataManager.Get.Question().isSolved = true;
-                    DataManager.Get.Save();
-                }
-                Debug.Log(currentText);
+                EndAction();
                 return true;
             }
             else
             {
                 lines[selectLines].SetCurrentChar(selectIndex, indexButton, symbol);
                 selectIndex++;
+                int maxchar = lines[selectLines].countSymbols;
+                int selectTemp = selectLines;
+                if (selectIndex >= maxchar)
+                {
+                    selectTemp += 1;
+                    if (lines.Length < selectTemp)
+                    {
+                        EndAction();
+                        return true;
+                    }
+                    if(lines[selectTemp].lineObject.gameObject.activeSelf == false)
+                    {
+                        EndAction();
+                        return true;
+                    }
+                }
                 return false;
             }
-
-
-
+        }
+        void EndAction()
+        {
+            currentText = CheckResultText();
+            if (currentText == answer)
+            {
+                DataManager.Get.Question().isSolved = true;
+                DataManager.Get.Save();
+            }
+            Debug.Log(currentText);
         }
         string CheckResultText()
         {
@@ -226,6 +254,12 @@ public class UICrosswordPanel : MonoBehaviour
         internal void Blocked()
         {
             isBlocked = true;
+        }
+
+        internal void BackCell()
+        {
+            selectIndex--;
+            lines[selectLines].ClearChar(selectIndex);
         }
     }
 
@@ -327,7 +361,11 @@ public class UICrosswordPanel : MonoBehaviour
         internal void Unblocked()
         {
             foreach (Button charButton in charButtons)
-                charButton.interactable = true;
+            {
+                if(charButton.GetComponentInChildren<Text>().text != "")
+                    charButton.interactable = true;
+            }
+                
 
         }
 
@@ -335,6 +373,11 @@ public class UICrosswordPanel : MonoBehaviour
         {
             charButtons[index].interactable = false;
             charButtons[index].GetComponentInChildren<Text>().text = "";
+        }
+        internal void OpenCell(int index,char symbol)
+        {
+            charButtons[index].interactable = true;
+            charButtons[index].GetComponentInChildren<Text>().text = symbol.ToString();
         }
     }
 
@@ -382,7 +425,7 @@ public class UICrosswordPanel : MonoBehaviour
     {
         if (outputData == null)
             outputData = new PanelCrosswordOutput();
-        outputData.Setup(answer, outputPanel, charPrefab, otherCharPrefab);
+        outputData.Setup(answer, outputPanel, ClickOutput, charPrefab, otherCharPrefab);
     }
 
     void ActivateButton(char symbol, int index)
@@ -403,5 +446,11 @@ public class UICrosswordPanel : MonoBehaviour
             if(DataManager.Get.Question().isSolved)
                 main.InitData();
         }
+    }
+    void ClickOutput(char symbol, int index)
+    {
+        outputData.BackCell();
+        inputData.OpenCell(index, symbol);
+        inputData.Unblocked();
     }
 }
