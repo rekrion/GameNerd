@@ -3,7 +3,7 @@
         {
             "nameCategory": "Игры",
             "icon": {
-                "instanceID": 19260
+                "instanceID": 14152
             },
             "questions": [
                 {
@@ -37,7 +37,7 @@
                         "instanceID": 0
                     },
                     "sprite": {
-                        "instanceID": 16722
+                        "instanceID": 14162
                     }
                 },
                 {
@@ -71,7 +71,7 @@
                         "instanceID": 0
                     },
                     "sprite": {
-                        "instanceID": 14342
+                        "instanceID": 14160
                     }
                 },
                 {

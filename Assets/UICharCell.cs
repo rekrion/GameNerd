@@ -7,4 +7,5 @@ public class UICharCell : MonoBehaviour
 {
     [SerializeField] public Text TextChar;
     [HideInInspector] public bool isOther = false;
+    [HideInInspector] public int IndexButton = -1;
 }
