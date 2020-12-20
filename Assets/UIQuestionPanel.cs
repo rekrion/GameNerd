@@ -10,8 +10,11 @@ public class UIQuestionPanel : MonoBehaviour
     [SerializeField] Image imageQuestion;
     [SerializeField] Text textQuestion;
     [SerializeField] GameObject soundQuestion;
-
+    [Header("Is Solved")]
     [SerializeField] Image outlineSolved;
+    [SerializeField] Color isSolved;
+    [SerializeField] Color isStandart;
+
 
     [Header("Main Buttons")]
     [SerializeField] Button next;
@@ -19,21 +22,32 @@ public class UIQuestionPanel : MonoBehaviour
     [SerializeField] Button hint;
 
     [Header("Inputs")]
-    [SerializeField] GameObject crossword;
-    [SerializeField] GameObject options;
+    [SerializeField] UICrosswordPanel crossword;
+    [SerializeField] UIOptionalPanel options;
     [SerializeField] GameObject inputfield;
 
     QuestionInfo question;
+
+
+    public bool IsSolved;
     internal void InitData()
     {
         question = DataManager.Get.Question();
+        IsSolved = question.isSolved;
         ResetAll();
+        ShowIsSolved();
         ShowTypeQuestion(question);
         ShowTypeInput(question);
         ShowButtons();
     }
 
-
+    private void ShowIsSolved()
+    {
+        if (IsSolved)
+            outlineSolved.color = this.isSolved;
+        else
+            outlineSolved.color = this.isStandart;
+    }
 
     void ResetAll()
     {
@@ -60,9 +74,9 @@ public class UIQuestionPanel : MonoBehaviour
     {
         switch (contactInfo.answer.type)
         {
-            case TypeAnswer.Crossword: { crossword.gameObject.SetActive(true);/**/ } break;
+            case TypeAnswer.Crossword: { crossword.gameObject.SetActive(true); crossword.InitData(question.answer.answerText); } break;
             case TypeAnswer.Input: { inputfield.gameObject.SetActive(true); /**/ } break;
-            case TypeAnswer.Options: { options.gameObject.SetActive(true);/**/ } break;
+            case TypeAnswer.Options: { options.gameObject.SetActive(true); options.InitData(question.answer.answerText, question.answer.falseOpitons); } break;
         }
         
     }

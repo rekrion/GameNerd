@@ -69,12 +69,11 @@ MonoBehaviour:
   type: 0
   answer:
     type: 0
-    answerText: "\u0444\u044B\u0432\u0444\u044B\u0432"
+    answerText: Grand Thef Auto V
     falseOpitons:
     - 
     - 
     - 
-  inputAnswer: {fileID: -8511056893489591558}
   isSolved: 0
   hints:
   - text: 
@@ -99,12 +98,11 @@ MonoBehaviour:
   type: 0
   answer:
     type: 1
-    answerText: "\u0444\u044B\u0432\u0444\u044B\u0432"
+    answerText: Super Meat  Boy:Region
     falseOpitons:
     - 
     - 
     - 
-  inputAnswer: {fileID: 6534011132066592163}
   isSolved: 0
   hints:
   - text: Info
@@ -260,7 +258,6 @@ MonoBehaviour:
     - "\u0444\u044B\u0432"
     - "\u0444\u044B"
     - "\u0432\u0444\u044B\u0432"
-  inputAnswer: {fileID: -1875255402767215176}
   isSolved: 0
   hints:
   - text: 

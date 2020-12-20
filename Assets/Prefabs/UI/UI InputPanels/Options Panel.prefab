@@ -728,6 +728,7 @@ GameObject:
   - component: {fileID: 7254681852783807678}
   - component: {fileID: 7254681852783807672}
   - component: {fileID: 7254681852783807679}
+  - component: {fileID: 2405942843804181626}
   m_Layer: 5
   m_Name: Options Panel
   m_TagString: Untagged
@@ -792,6 +793,27 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &2405942843804181626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7254681852783807677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67a56eaa5611203449e6116ee374f107, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  options:
+  - {fileID: 7254681852139715050}
+  - {fileID: 7254681851852318206}
+  - {fileID: 7254681851655460662}
+  - {fileID: 7254681852201769613}
+  main: {fileID: 0}
+  isSolved: {r: 0, g: 1, b: 0.027932882, a: 1}
+  isStandart: {r: 1, g: 1, b: 1, a: 1}
+  isFalsed: {r: 1, g: 0.15566039, b: 0.15566039, a: 1}
 --- !u!1 &7254681852963891859
 GameObject:
   m_ObjectHideFlags: 0

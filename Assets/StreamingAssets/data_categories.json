@@ -10,17 +10,8 @@
                     "type": 0,
                     "answer": {
                         "type": 1,
-                        "answerText": "фывфыв",
+                        "answerText": "Super Meat  Boy:Region",
                         "falseOpitons": [
-                            "",
-                            "",
-                            ""
-                        ]
-                    },
-                    "inputAnswer": {
-                        "type": 1,
-                        "answerText": "фывфыв",
-                        "falseOptions": [
                             "",
                             "",
                             ""
@@ -53,17 +44,8 @@
                     "type": 0,
                     "answer": {
                         "type": 0,
-                        "answerText": "фывфыв",
+                        "answerText": "Grand Thef Auto V",
                         "falseOpitons": [
-                            "",
-                            "",
-                            ""
-                        ]
-                    },
-                    "inputAnswer": {
-                        "type": 0,
-                        "answerText": "фывфыв",
-                        "falseOptions": [
                             "",
                             "",
                             ""
@@ -98,15 +80,6 @@
                         "type": 2,
                         "answerText": "фывфыв",
                         "falseOpitons": [
-                            "фыв",
-                            "фы",
-                            "вфыв"
-                        ]
-                    },
-                    "inputAnswer": {
-                        "type": 2,
-                        "answerText": "фывфыв",
-                        "falseOptions": [
                             "фыв",
                             "фы",
                             "вфыв"

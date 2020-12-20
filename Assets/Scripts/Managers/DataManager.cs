@@ -90,6 +90,11 @@ public class DataManager : Singleton<DataManager>
         }
     }
 
+    internal void Save()
+    {
+        SaveData(filename, data.Categories);
+    }
+
     internal bool IsStartQuestion()
     {
         return currentQuestion == 0;

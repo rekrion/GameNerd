@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4226955778914267833}
   - component: {fileID: 8645432971739794086}
   - component: {fileID: 690698075463404620}
+  - component: {fileID: -7121938099734379940}
   m_Layer: 5
   m_Name: Char Cell
   m_TagString: Untagged
@@ -76,6 +77,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &-7121938099734379940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 732360437488692478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfc03e9c422b89c4985636930af18a8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TextChar: {fileID: 8611802628043915183}
+  isOther: 0
 --- !u!1 &3753925538077317455
 GameObject:
   m_ObjectHideFlags: 0
@@ -143,7 +158,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 72
+    m_FontSize: 68
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 5
