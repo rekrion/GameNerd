@@ -15,34 +15,39 @@ public class Shop : MonoBehaviour
         public bool IsPurchased = false;
     }
 
+
     [SerializeField] List<ShopItem> ShopItemsList;
 
 
 
+    [SerializeField] UICellShop cellPrefab;
 
-    GameObject ItemTemplate;
-    GameObject g;
-    [SerializeField] Transform ShopScrollView;
+    [SerializeField] Transform contentPanel;
    
     // Start is called before the first frame update
     void Start()
     {
-       ItemTemplate = ShopScrollView.GetChild(0).gameObject;
-        int len = ShopItemsList.Count;  
-        for (int i = 0; i < len; i++)   
-        {
-            g = Instantiate(ItemTemplate, ShopScrollView);
-            g.transform.GetChild(0).GetComponent<Image>().sprite = ShopItemsList[i].Image;
-            //g.transform.GetChild(1).GetChild(0).GetComponent<Text>().text = ShopItemsList[i].Price.ToString();
-            //g.transform.GetChild(2).GetComponent<Button>().interactable = ShopItemsList[i].IsPurchased;
-        }
-       Destroy(ItemTemplate);
+        InitData();
     }
      
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    public void InitData()
+    {
+        UICellShop g;
+        //ItemTemplate = ShopScrollView.GetChild(0).gameObject;
+        int len = ShopItemsList.Count;
+        for (int i = 0; i < len; i++)
+        {
+            g = Instantiate(cellPrefab, contentPanel);
+            g.image.sprite = ShopItemsList[i].Image;
+            g.price.text = ShopItemsList[i].Price.ToString();
+            g.button.interactable = ShopItemsList[i].IsPurchased;
+        }
     }
 }
 
