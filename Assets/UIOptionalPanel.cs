@@ -51,9 +51,9 @@ public class UIOptionalPanel : MonoBehaviour
         optionInputs[0].text = answerOption;
         optionInputs[0].isCorrect = true;
 
-        for (int i = 1; i < falseOptions.Length; i++)
+        for (int i = 1; i < optionInputs.Length; i++)
         {
-            optionInputs[i].text = falseOptions[i];
+            optionInputs[i].text = falseOptions[i - 1];
             optionInputs[i].isCorrect = false;
         }
         Shuffle();

@@ -1,16 +1,16 @@
 {
     "items": [
         {
-            "nameCategory": "Игры",
+            "nameCategory": "Страны",
             "icon": {
-                "instanceID": 14150
+                "instanceID": 16456
             },
             "questions": [
                 {
                     "type": 0,
                     "answer": {
-                        "type": 1,
-                        "answerText": "Super Meat  Boy:Region",
+                        "type": 0,
+                        "answerText": "Russia",
                         "falseOpitons": [
                             "",
                             "",
@@ -20,15 +20,15 @@
                     "isSolved": false,
                     "hints": [
                         {
-                            "text": "Info",
+                            "text": "Slavs",
                             "issued": false
                         },
                         {
-                            "text": "Info",
+                            "text": "Bear",
                             "issued": false
                         },
                         {
-                            "text": "Info",
+                            "text": "Vodka",
                             "issued": false
                         }
                     ],
@@ -43,8 +43,42 @@
                 {
                     "type": 0,
                     "answer": {
-                        "type": 0,
-                        "answerText": "Grand Thef Auto V",
+                        "type": 2,
+                        "answerText": "China",
+                        "falseOpitons": [
+                            "USSR",
+                            "America",
+                            "Tailand"
+                        ]
+                    },
+                    "isSolved": false,
+                    "hints": [
+                        {
+                            "text": "Great Wall",
+                            "issued": false
+                        },
+                        {
+                            "text": "Panda",
+                            "issued": false
+                        },
+                        {
+                            "text": "Silk",
+                            "issued": false
+                        }
+                    ],
+                    "text": "",
+                    "sound": {
+                        "instanceID": 0
+                    },
+                    "sprite": {
+                        "instanceID": 14150
+                    }
+                },
+                {
+                    "type": 1,
+                    "answer": {
+                        "type": 1,
+                        "answerText": "united states america",
                         "falseOpitons": [
                             "",
                             "",
@@ -54,53 +88,19 @@
                     "isSolved": false,
                     "hints": [
                         {
-                            "text": "",
+                            "text": "MacDonalds",
                             "issued": false
                         },
                         {
-                            "text": "",
+                            "text": "Baby Atom",
                             "issued": false
                         },
                         {
-                            "text": "",
+                            "text": "WTF!",
                             "issued": false
                         }
                     ],
-                    "text": "",
-                    "sound": {
-                        "instanceID": 0
-                    },
-                    "sprite": {
-                        "instanceID": 14158
-                    }
-                },
-                {
-                    "type": 1,
-                    "answer": {
-                        "type": 2,
-                        "answerText": "фывфыв",
-                        "falseOpitons": [
-                            "фыв",
-                            "фы",
-                            "вфыв"
-                        ]
-                    },
-                    "isSolved": false,
-                    "hints": [
-                        {
-                            "text": "",
-                            "issued": false
-                        },
-                        {
-                            "text": "",
-                            "issued": false
-                        },
-                        {
-                            "text": "",
-                            "issued": false
-                        }
-                    ],
-                    "text": "вопрос это ответ",
+                    "text": "Соединенные...",
                     "sound": {
                         "instanceID": 0
                     },

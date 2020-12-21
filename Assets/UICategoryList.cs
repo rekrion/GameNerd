@@ -20,13 +20,14 @@ public class UICategoryList : MonoBehaviour, IRecyclableScrollRectDataSource
     void Start()
     {
         InitData();
-        _recyclableScrollRect.DataSource = this;
+
     }
 
     //Initialising _contactList with dummy data 
-    private void InitData()
+    public void InitData()
     {
         categories = DataManager.Get.Categories;
+        _recyclableScrollRect.DataSource = this;
     }
 
     public int GetItemCount()

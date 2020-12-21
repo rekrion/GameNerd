@@ -24,15 +24,23 @@ public class UIQuestionPanel : MonoBehaviour
     [Header("Inputs")]
     [SerializeField] UICrosswordPanel crossword;
     [SerializeField] UIOptionalPanel options;
-    [SerializeField] GameObject inputfield;
+    [SerializeField] UIInputFieldPanel inputfield;
 
     QuestionInfo question;
 
-
+    int issuedHints = 0;
     public bool IsSolved;
     internal void InitData()
     {
         question = DataManager.Get.Question();
+        foreach(Hint hint in DataManager.Get.Question().hints)
+        {
+            if (hint.issued)
+            {
+                issuedHints++;
+            }
+        }
+        Debug.Log($"Hints {issuedHints}");
         IsSolved = question.isSolved;
         ResetAll();
         ShowIsSolved();
@@ -75,7 +83,7 @@ public class UIQuestionPanel : MonoBehaviour
         switch (contactInfo.answer.type)
         {
             case TypeAnswer.Crossword: { crossword.gameObject.SetActive(true); crossword.InitData(question.answer.answerText); } break;
-            case TypeAnswer.Input: { inputfield.gameObject.SetActive(true); /**/ } break;
+            case TypeAnswer.Input: { inputfield.gameObject.SetActive(true); inputfield.InitData(question.answer.answerText); } break;
             case TypeAnswer.Options: { options.gameObject.SetActive(true); options.InitData(question.answer.answerText, question.answer.falseOpitons); } break;
         }
         
@@ -106,6 +114,11 @@ public class UIQuestionPanel : MonoBehaviour
     }
     public void ShowHint()
     {
-
+        if (issuedHints > 2) issuedHints = 2;
+        Debug.Log($"Activate Hints {issuedHints}");
+        DataManager.Get.Question().hints[issuedHints].issued = true;
+        DataManager.Get.Save();
+        UIController.Get.ShowHintPanel();
+        issuedHints++;
     }
 }

@@ -6,8 +6,8 @@ using UnityEngine;
 [System.Serializable]
 public class Hint
 {
-    [SerializeField] string text;
-    [SerializeField] bool issued;
+    [SerializeField] public string text;
+    [SerializeField] public bool issued;
 
     public Hint()
     {
